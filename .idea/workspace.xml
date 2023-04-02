@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c8f9c4d-fa61-4ebf-ad91-d92bc7164645" name="Changes" comment="Added  int recipeQuantity, fixed readRecipeFromFile(), added class PrintList">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ingredientlist.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ingredient/Ketchup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/recipe/Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/write_read_print/PrintList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipe.bin" beforeDir="false" afterPath="$PROJECT_DIR$/recipe.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingredient/Bun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingredient/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrintList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/FileRead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipe/Recipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RecipeBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipe/RecipeBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sausage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingredient/Sausage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/FileWrite.java" afterDir="false" />
+    <list default="true" id="6c8f9c4d-fa61-4ebf-ad91-d92bc7164645" name="Changes" comment="commit 3">
+      <change afterPath="$PROJECT_DIR$/src/uienum/UiMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recipe/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipe/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/write_read_print/FileRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/FileRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/write_read_print/PrintList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/PrintList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +17,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -55,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/andrei/IdeaProjects/hotdognew"
+    "last_opened_file_path": "/home/andrei/IdeaProjects/comic_book"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -93,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680429152503</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit 3">
+      <created>1680462631471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680462631471</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added  int recipeQuantity, fixed readRecipeFromFile(), added class PrintList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added  int recipeQuantity, fixed readRecipeFromFile(), added class PrintList" />
+    <MESSAGE value="commit 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 3" />
   </component>
 </project>

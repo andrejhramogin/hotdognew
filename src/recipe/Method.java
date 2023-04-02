@@ -4,9 +4,9 @@ import ingredient.Bun;
 import ingredient.Ingredient;
 import ingredient.Ketchup;
 import ingredient.Sausage;
-import write_read_print.FileRead;
-import write_read_print.FileWrite;
-import write_read_print.PrintList;
+import uienum.UiMessage;
+import write_read_print.*;
+
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -26,14 +26,14 @@ public class Method {
         try {
             i = scanner.nextInt();
         } catch (InputMismatchException e) {
-            System.out.println("You`d entered not an integer. Try agan.");
+            System.out.println(UiMessage.NOT_INTEGER);
             while (true) {
                 scanner.next();
                 if (scanner.hasNextInt()) {
                     i = scanner.nextInt();
                     break;
                 }
-                System.out.println("You`d entered not an integer. Try agan.");
+                System.out.println(UiMessage.NOT_INTEGER);
             }
         }
         return i;
@@ -44,14 +44,14 @@ public class Method {
         try {
             d = scanner.nextDouble();
         } catch (InputMismatchException e) {
-            System.out.println("You`d entered not an integer. Try agan.");
+            System.out.println(UiMessage.NOT_DOUBLE);
             while (true) {
                 scanner.next();
                 if (scanner.hasNextDouble()) {
                     d = scanner.nextDouble();
                     break;
                 }
-                System.out.println("You`d entered not an integer. Try agan.");
+                System.out.println(UiMessage.NOT_DOUBLE);
             }
         }
         return d;
@@ -84,14 +84,14 @@ public class Method {
         list.add(Sausage.createIngredient());
         System.out.println("Ketchup");
         list.add(Ketchup.createIngredient());
-        FileWrite.writeIngrListToFile(list, "ingredientlist.bin");
+        FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 
     public static void addIngrToIngrList (){
-        List<Ingredient> list = FileRead.readIngredientList("ingredientlist.bin");
-        System.out.println("Add new ingredient to list.");
+        List<Ingredient> list = FileRead.readIngredientList(UiMessage.INGREDIENT_LIST.getMessage());
+        System.out.println(UiMessage.ADD_NEW_INGREDIENT);
         list.add(Ingredient.createIngredient());
         PrintList.printIngredientList(list);
-        FileWrite.writeIngrListToFile(list, "ingredientlist.bin");
+        FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 }

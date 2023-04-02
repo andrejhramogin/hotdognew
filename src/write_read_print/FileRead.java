@@ -3,6 +3,7 @@ package write_read_print;
 import ingredient.Ingredient;
 import recipe.Recipe;
 import recipe.RecipeBase;
+import uienum.UiMessage;
 
 import java.io.ObjectInputStream;
 import java.nio.file.Files;
@@ -16,7 +17,7 @@ public class FileRead {
      */
     public static RecipeBase readBase(){
         RecipeBase rb = new RecipeBase();
-        try(ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(Paths.get("recipe_list.bin")))){
+        try(ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(Paths.get(UiMessage.RECIPE_LIST.getMessage())))){
 
             rb = (RecipeBase) ois.readObject();
 
