@@ -1,5 +1,10 @@
+package recipe;
+
+import ingredient.Ingredient;
+
 import java.io.Serializable;
 import java.util.List;
+
 
 public class Recipe implements Serializable {
 
