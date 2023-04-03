@@ -59,29 +59,28 @@ public class Method {
         return d;
     }
 
-    public static void createRecipe(List<Ingredient> li) {
-        PrintList.printIngredientList(li);
-        List<Ingredient> ingrList = new ArrayList<>();
-        List<Recipe> recipeBase = FileRead.readBase();
-        int choice;
+    public static void createRecipe(List<Ingredient> ingrList) {
+        PrintList.printIngredientList(ingrList);
+        List<Ingredient> recipe = new ArrayList<>();
+        List<Recipe> recipeBase = FileRead.readRecipeList();
+        int ingrChoice;
         System.out.println(UiMessage.INGREDIENT_CHOICE.getMessage());
 
         while (Method.scanner.hasNextInt()) {
-            choice = Method.getInteger();
+            ingrChoice = Method.getInteger();
 
             System.out.println(UiMessage.QUANTITY.getMessage());
             int quantity = Method.getInteger();
 
-            li.get(choice - 1).setRecipeQuantity(quantity);
-            li.get(choice - 1).setReserve(li.get(choice - 1).getReserve() - quantity);
-            PrintList.printRecipeIngredient(li.get(choice - 1));
-            ingrList.add(li.get(choice - 1));
+            ingrList.get(ingrChoice - 1).setRecipeQuantity(quantity);
+            ingrList.get(ingrChoice - 1).setReserve(ingrList.get(ingrChoice - 1).getReserve() - quantity);
+            PrintList.printRecipeIngredient(ingrList.get(ingrChoice - 1));
+            recipe.add(ingrList.get(ingrChoice - 1));
         }
-        PrintList.printRecipeIngrList(ingrList);
-        int number = recipeBase.get(recipeBase.size()-1).getNumber() + 1;
-        recipeBase.add(new Recipe(number, ingrList));
+        PrintList.printRecipeIngrList(recipe);
+        int number = recipeBase.get(recipeBase.size()-1).getSequenceNumber() + 1;
+        recipeBase.add(new Recipe(number, recipe, 0));
         FileWrite.writeRecipeListToFile(recipeBase);
-
     }
 
     public static void createIngrList() {

@@ -6,23 +6,23 @@ import java.io.Serializable;
 import java.util.List;
 
 
-public class Recipe implements Serializable {
+public class Recipe implements Serializable  {
 
     private static final long serialVersionUID = 1L;
 
     private List<Ingredient> list;
-    private int number;
 
-    public Recipe(int number, List<Ingredient> list){
-        this.number = number;
+    private int sequenceNumber;
+
+    private int quantityHotDog;
+
+    public Recipe(int sequenceNumber, List<Ingredient> list, int quantityHotDog){
+        this.sequenceNumber = sequenceNumber;
         this.list = list;
+        this.quantityHotDog = quantityHotDog;
     }
 
     public Recipe(){}
-
-    public static void createRecipe(){
-        System.out.println("");
-    }
 
     public List<Ingredient> getList() {
         return list;
@@ -32,11 +32,19 @@ public class Recipe implements Serializable {
         this.list = list;
     }
 
-    public int getNumber() {
-        return number;
+    public int getSequenceNumber() {
+        return sequenceNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setSequenceNumber(int sequenceNumber) {
+        this.sequenceNumber = sequenceNumber;
+    }
+
+    public int getQuantityHotDog() {
+        return quantityHotDog;
+    }
+
+    public void setQuantityHotDog(int quantityHotDog) {
+        this.quantityHotDog = quantityHotDog;
     }
 }
