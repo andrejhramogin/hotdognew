@@ -22,12 +22,12 @@ public class FileWrite {
     }
 
 
-    /**
-     * Получает в качестве  параметра List<ingredient.Ingredient> и записывает в файл в обертке recipe.Recipe.
+    /*
+     * Получает в качестве  параметра List< Ingredient> и записывает в файл в обертке  Recipe.
      */
     public static void writeIngrListToFile(List<Ingredient> ingredient, String path) {
         try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(Paths.get(path)))) {
-            oos.writeObject(new Recipe(ingredient));
+            oos.writeObject(new Recipe(0, ingredient));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

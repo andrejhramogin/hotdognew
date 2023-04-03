@@ -12,10 +12,10 @@ import java.util.List;
 
 public class FileRead {
 
-    /**
-     * Считывает из файла и возвращает объект Base (List<recipe.Recipe>)
+    /*
+     * Считывает из файла и возвращает объект Base (List<Recipe>)
      */
-    public static RecipeBase readBase(){
+    public static List<Recipe> readBase(){
         RecipeBase rb = new RecipeBase();
         try(ObjectInputStream ois = new ObjectInputStream(Files.newInputStream(Paths.get(UiMessage.RECIPE_LIST.getMessage())))){
 
@@ -24,11 +24,11 @@ public class FileRead {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        return rb;
+        return rb.getList();
     }
 
-    /**
-     *Считывает из файла объект recipe.Recipe и возвращает содержащийся в нем List<ingredient.Ingredient>
+    /*
+     *Считывает из файла объект  Recipe и возвращает содержащийся в нем List< Ingredient>
      */
     public static List<Ingredient> readIngredientList(String path){
         Recipe rc = new Recipe();

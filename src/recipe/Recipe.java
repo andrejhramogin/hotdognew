@@ -11,8 +11,10 @@ public class Recipe implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private List<Ingredient> list;
+    private int number;
 
-    public Recipe(List<Ingredient> list){
+    public Recipe(int number, List<Ingredient> list){
+        this.number = number;
         this.list = list;
     }
 
@@ -30,4 +32,11 @@ public class Recipe implements Serializable {
         this.list = list;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 }

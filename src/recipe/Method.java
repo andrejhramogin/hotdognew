@@ -1,5 +1,6 @@
 package recipe;
 
+import comparator.ComparatorNameIngr;
 import ingredient.Bun;
 import ingredient.Ingredient;
 import ingredient.Ketchup;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Method {
 
@@ -57,26 +59,32 @@ public class Method {
         return d;
     }
 
-    public static void createRecipe() {
-        List<Ingredient> list = new ArrayList<>();
-        System.out.println("To add bun - enter b\n" +
-                "To add sausage - enter s");
-        String choice = Method.getString();
+    public static void createRecipe(List<Ingredient> li) {
+        PrintList.printIngredientList(li);
+        List<Ingredient> ingrList = new ArrayList<>();
+        List<Recipe> recipeBase = FileRead.readBase();
+        int choice;
+        System.out.println(UiMessage.INGREDIENT_CHOICE.getMessage());
 
-        switch (choice) {
-            case ("b"):
-                list.add(Bun.createIngredient());
-                break;
-            case ("s"):
-                list.add(Sausage.createIngredient());
-                break;
-            case ("n"):
-          createRecipe();
+        while (Method.scanner.hasNextInt()) {
+            choice = Method.getInteger();
 
+            System.out.println(UiMessage.QUANTITY.getMessage());
+            int quantity = Method.getInteger();
+
+            li.get(choice - 1).setRecipeQuantity(quantity);
+            li.get(choice - 1).setReserve(li.get(choice - 1).getReserve() - quantity);
+            PrintList.printRecipeIngredient(li.get(choice - 1));
+            ingrList.add(li.get(choice - 1));
         }
+        PrintList.printRecipeIngrList(ingrList);
+        int number = recipeBase.get(recipeBase.size()-1).getNumber() + 1;
+        recipeBase.add(new Recipe(number, ingrList));
+        FileWrite.writeRecipeListToFile(recipeBase);
+
     }
 
-    public static void createIngrList(){
+    public static void createIngrList() {
         List<Ingredient> list = new ArrayList<>();
         System.out.println("Bun:");
         list.add(Bun.createIngredient());
@@ -87,11 +95,19 @@ public class Method {
         FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 
-    public static void addIngrToIngrList (){
+    public static void addIngrToIngredientlist() {
         List<Ingredient> list = FileRead.readIngredientList(UiMessage.INGREDIENT_LIST.getMessage());
         System.out.println(UiMessage.ADD_NEW_INGREDIENT);
         list.add(Ingredient.createIngredient());
+        list = list.stream()
+                .sorted(new ComparatorNameIngr())
+                .collect(Collectors.toList());
         PrintList.printIngredientList(list);
+        FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
+    }
+
+    public void deleteIngrFromIngredientlist(List<Ingredient> list, int i) {
+        list.remove(i);
         FileWrite.writeIngrListToFile(list, UiMessage.INGREDIENT_LIST.getMessage());
     }
 }

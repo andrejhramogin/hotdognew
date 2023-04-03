@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c8f9c4d-fa61-4ebf-ad91-d92bc7164645" name="Changes" comment="commit 3">
-      <change afterPath="$PROJECT_DIR$/src/uienum/UiMessage.java" afterDir="false" />
+    <list default="true" id="6c8f9c4d-fa61-4ebf-ad91-d92bc7164645" name="Changes" comment="commit 4 enum uiMessage">
+      <change afterPath="$PROJECT_DIR$/recipelist.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comparator/ComparatorNameIngr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredientlist.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ingredientlist.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/recipe/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipe/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recipe/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recipe/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uienum/UiMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uienum/UiMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/write_read_print/FileRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/FileRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/write_read_print/FileWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/FileWrite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/write_read_print/PrintList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/write_read_print/PrintList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,16 +23,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="branch1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,14 +47,14 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/andrei/IdeaProjects/comic_book"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/andrei/IdeaProjects/hotdognew&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ingredient" />
